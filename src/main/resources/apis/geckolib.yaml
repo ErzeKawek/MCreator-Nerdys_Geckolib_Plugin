@@ -75,4 +75,23 @@ forge-1.20.1:
   update_files:
     - ~
 
+fabric-1.20.1:
+  gradle: |
+    repositories {
+      maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+                includeGroupByRegex("software\\.bernie.*")
+                includeGroup("com.eliotlash.mclib")
+        }
+    }
+
+    dependencies {
+        modImplementation 'software.bernie.geckolib:geckolib-fabric-1.20.4:4.4.2'
+    }
+  
+  update_files:
+    - ~
+
 name: "GeckoLib"
